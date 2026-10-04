@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Yopi</title>
+<meta name="description" content="Contact the Yopi team for support, billing and privacy questions.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact · Yopi">
+<meta property="og:description" content="Contact the Yopi team for support, billing and privacy questions.">
+<meta property="og:image" content="https://yopi.app/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/apple-touch-icon.png" alt="">Yopi</a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn sm" href="https://apps.apple.com/app/id0000000000">Get the app</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<main>
+
+<section class="page-hero"><div class="wrap"><h1>Contact <em class="y">us</em></h1><p>Questions, feedback or a problem with the app? We usually reply within 1–2 business days.</p></div></section>
+<div class="wrap contact-grid">
+  <div class="card">
+    <h2>Send us a message</h2>
+    <p>Fill this in and your email app opens with everything ready to send.</p>
+    <form id="cf">
+      <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+      <label for="email">Your email<input id="email" name="email" type="email" autocomplete="email" required></label>
+      <label for="topic">Topic<select id="topic" name="topic">
+        <option>General question</option><option>Subscription or billing</option><option>Problem with a creation</option><option>Delete my account or data</option><option>Privacy request</option><option>Feedback or idea</option><option>Business or press</option>
+      </select></label>
+      <label for="msg">Message<textarea id="msg" name="msg" required placeholder="Tell us what happened. For app problems, include your iPhone model and app version."></textarea></label>
+      <button class="btn" type="submit">Open email to send</button>
+      <span class="hint">Or email us directly at <a href="mailto:support@yopi.app">support@yopi.app</a>.</span>
+    </form>
+  </div>
+  <div style="display:grid;gap:20px;align-content:start">
+    <div class="card">
+      <h2>Email</h2>
+      <p>Reach the Yopi team directly.</p>
+      <div class="email-box"><code id="em">support@yopi.app</code><button class="btn sm" id="copy" type="button">Copy</button></div>
+    </div>
+    <div class="card">
+      <h2>Quick answers</h2>
+      <div class="topics">
+        <div class="topic"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFEF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg></span><div><b>Cancel or manage a subscription</b><span>iPhone Settings → your name → Subscriptions → Yopi.</span></div></div>
+        <div class="topic"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFEF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span><div><b>Restore purchases</b><span>In the app: Settings → Restore purchases.</span></div></div>
+        <div class="topic"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFEF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></span><div><b>Delete your account</b><span>In the app: Settings → Account → Delete account.</span></div></div>
+        <div class="topic"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFEF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/></svg></span><div><b>Privacy</b><span>See our <a href="privacy.html">Privacy Policy</a>.</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  var EMAIL='support@yopi.app';
+  function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},2200);}
+  document.getElementById('cf').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target, sub='[Yopi] '+f.topic.value+' – '+f.name.value;
+    var body=f.msg.value+'\n\n—\nName: '+f.name.value+'\nEmail: '+f.email.value;
+    location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+  });
+  document.getElementById('copy').addEventListener('click',function(){
+    if(navigator.clipboard){navigator.clipboard.writeText(EMAIL).then(function(){toast('Email copied')},function(){toast(EMAIL)});} else toast(EMAIL);
+  });
+})();
+</script>
+
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Yopi. All rights reserved.</span>
+    <nav aria-label="Footer">
+      <a href="index.html#features">Features</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

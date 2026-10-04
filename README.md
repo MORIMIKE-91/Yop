@@ -1,4 +1,4 @@
-# Yopi website
+# Yop website
 
 Static website for the Yopi app: home page, Privacy Policy, Terms of Use, Contact and a 404 page.
 No build step. Upload the files and it works.

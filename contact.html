@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact · Yopi">
 <meta property="og:description" content="Contact the Yopi team for support, billing and privacy questions.">
-<meta property="og:image" content="https://yopi.app/assets/og.jpg">
+<meta property="og:image" content="https://yopi.cam/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,14 +47,14 @@
       </select></label>
       <label for="msg">Message<textarea id="msg" name="msg" required placeholder="Tell us what happened. For app problems, include your iPhone model and app version."></textarea></label>
       <button class="btn" type="submit">Open email to send</button>
-      <span class="hint">Or email us directly at <a href="mailto:support@yopi.app">support@yopi.app</a>.</span>
+      <span class="hint">Or email us directly at <a href="mailto:support@yopi.cam">support@yopi.cam</a>.</span>
     </form>
   </div>
   <div style="display:grid;gap:20px;align-content:start">
     <div class="card">
       <h2>Email</h2>
       <p>Reach the Yopi team directly.</p>
-      <div class="email-box"><code id="em">support@yopi.app</code><button class="btn sm" id="copy" type="button">Copy</button></div>
+      <div class="email-box"><code id="em">support@yopi.cam</code><button class="btn sm" id="copy" type="button">Copy</button></div>
     </div>
     <div class="card">
       <h2>Quick answers</h2>
@@ -70,7 +70,7 @@
 <div class="toast" id="toast" role="status"></div>
 <script>
 (function(){
-  var EMAIL='support@yopi.app';
+  var EMAIL='support@yopi.cam';
   function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},2200);}
   document.getElementById('cf').addEventListener('submit',function(e){
     e.preventDefault();
